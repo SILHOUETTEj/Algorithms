@@ -20,11 +20,12 @@ function findSmallest(arr) {
 function selection_sort(arr) {
     let sortedArr = [];
     let lengthOfArr = arr.length;
-    for(let i = 0; i < sizeOfArr; i++) {
+    for(let i = 0; i < lengthOfArr; i++) {
         sortedArr.push(arr[findSmallest(arr)]);
         arr.splice(findSmallest(arr),1);
-        console.log('work');
     }
     return sortedArr;
 }
+
+
 
