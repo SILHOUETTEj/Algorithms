@@ -11,25 +11,41 @@ let processed = [] // Массив для отслеживания обрабо�
 // Заполнение графа
 
 graph['start'] = {};
-graph['start']['a'] = 6
+graph['start']['a'] = 5
 graph['start']['b'] = 2
+
 graph['a'] = {}
-graph['a']['final'] = 1
+graph['a']['c'] = 4
+graph['a']['d'] = 2
+
 graph['b'] = {}
-graph['b']['a'] = 3
-graph['b']['final'] = 5
+graph['b']['a'] = 8
+graph['b']['d'] = 7
+
+graph['c'] = {}
+graph['c']['d'] = 6
+graph['c']['final'] = 3
+
+graph['d'] = {}
+graph['d']['final'] = 1
+
+
 graph['final'] = {}
 
 // Заполнение стоимостей рёбер
 
-costs['a'] = 6;
+costs['a'] = 5;
 costs['b'] = 2;
+costs['c'] = Infinity;
+costs['d'] = Infinity;
 costs['final'] = Infinity;
 
 // Заполнение родителей узлов
 
 parents['a'] = 'start';
 parents['b'] = 'start';
+parents['c'] = null;
+parents['d'] = null;
 parents['final'] = null;
 
 // Реализация алгоритма
@@ -66,6 +82,6 @@ while(node) {
 }
 
 console.log(costs)
-
+console.log(parents)
 
 
